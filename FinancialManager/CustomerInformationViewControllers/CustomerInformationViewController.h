@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface CustomerInformationViewController : UIViewController
+
++ (CustomerInformationViewController *)instance;
 
 @end

@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "MainViewController.h"
+@class CustomerInformationViewController;
 
-@interface MenuListViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate>
+@interface MenuListViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate>{
+   @private
+    CustomerInformationViewController *customInfoVC;
+}
 
 @property(nonatomic,strong) NSMutableArray *listArr;
 @property(nonatomic,weak) MainViewController *mainVC;
+@property(nonatomic,weak) CustomerInformationViewController *customerInfoVC;
 @end

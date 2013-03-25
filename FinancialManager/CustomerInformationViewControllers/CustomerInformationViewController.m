@@ -14,11 +14,24 @@
 
 @implementation CustomerInformationViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+static CustomerInformationViewController *instance = nil;
+
++ (CustomerInformationViewController *)instance  {
+     static CustomerInformationViewController *instance;
+   
+     @synchronized(self) {
+       if(!instance) {
+          instance = [[CustomerInformationViewController alloc] init];
+       }
+    }
+      return instance;
+}
+
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
-        // Custom initialization
+        instance = self;
     }
     return self;
 }

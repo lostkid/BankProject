@@ -33,17 +33,16 @@
 {
     [super viewDidLoad];
     
+    CustomerInformationViewController *cusInfoVC = [CustomerInformationViewController instance];
+    UINavigationController *navInfo = [[UINavigationController alloc] initWithRootViewController:cusInfoVC];
+    self.detailViewController = navInfo;
+    
     MenuListViewController *menuListVC = [[MenuListViewController alloc] init];
     UINavigationController *navMenuVC = [[UINavigationController alloc] initWithRootViewController:menuListVC];
     menuListVC.mainVC=self;
     self.masterViewController = navMenuVC;
+    menuListVC.customerInfoVC=cusInfoVC;
 
-
-    CustomerInformationViewController *cusInfoVC = [[CustomerInformationViewController alloc] init];
-    UINavigationController *navInfo = [[UINavigationController alloc] initWithRootViewController:cusInfoVC];
-    self.detailViewController = navInfo;
-    
-       
 }
 
 

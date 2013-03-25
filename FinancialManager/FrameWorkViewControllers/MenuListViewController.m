@@ -43,9 +43,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+        
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Login Out" style:UIBarButtonItemStylePlain target:self action:@selector(LoginOut)];
     
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+}
+
+#pragma mark--
+#pragma mark--设置CustomerInfoVC属性
+- (void)setCustomerInfoVC:(CustomerInformationViewController *)customerInfoVC{
+    customerInfoVC.title = [self.listArr objectAtIndex:0];
 }
 
 #pragma mark--
@@ -77,28 +84,31 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //客户资料
     if (indexPath.row==0) {
-        CustomerInformationViewController *customInfoVC = [[CustomerInformationViewController alloc] init];
+        customInfoVC = [CustomerInformationViewController instance];
+        customInfoVC.title = [self.listArr objectAtIndex:0];
         self.mainVC.detailViewControllers=customInfoVC;
     }
     //金融工具箱
     if (indexPath.row==1) {
         FinancialToolBoxViewController *toolBoxVC = [[FinancialToolBoxViewController alloc] init];
+        toolBoxVC.title = [self.listArr objectAtIndex:1];
         self.mainVC.detailViewControllers=toolBoxVC;
     }
     //产品展示
     if (indexPath.row==2) {
         ProductsShowViewController *productShowVC = [[ProductsShowViewController alloc] init];
+        productShowVC.title = [self.listArr objectAtIndex:2];
         self.mainVC.detailViewControllers=productShowVC;
     }
     
     //产品对比
     if (indexPath.row==3) {
         ProductsContrastViewController *priductsContrastVC =[[ProductsContrastViewController alloc] init];
+        priductsContrastVC.title = [self.listArr objectAtIndex:3];
         self.mainVC.detailViewControllers=priductsContrastVC;
     }
 
 }
-
 
 
 - (void)didReceiveMemoryWarning
