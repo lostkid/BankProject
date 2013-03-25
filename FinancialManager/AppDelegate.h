@@ -16,4 +16,7 @@
 
 @property (strong, nonatomic) MainViewController *viewController;
 
+- (void)getMainVC;
++(id)getAppdelegate;
+- (void)getEnterPasswordVC;
 @end

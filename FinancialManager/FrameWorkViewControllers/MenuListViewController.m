@@ -8,10 +8,14 @@
 
 #import "MenuListViewController.h"
 
+#import "AppDelegate.h"
+
 #import "CustomerInformationViewController.h"
 #import "FinancialToolBoxViewController.h"
 #import "ProductsShowViewController.h"
 #import "ProductsContrastViewController.h"
+
+#import "Authority.h"
 
 @interface MenuListViewController ()
 
@@ -29,10 +33,18 @@
     return self;
 }
 
+
+- (void)LoginOut{
+    
+    [[AppDelegate getAppdelegate] getEnterPasswordVC];
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Login Out" style:UIBarButtonItemStylePlain target:self action:@selector(LoginOut)];
     
 }
 
@@ -86,6 +98,8 @@
     }
 
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

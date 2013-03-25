@@ -38,6 +38,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self _initView];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -217,6 +218,7 @@
     for (NSNumber* index in _paths) {
         [delegateArray addObject:index];
     }
+    [self resetView];
     [_delegate unlockerView:self didFinished:delegateArray];
 }
 

@@ -7,7 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NineGridUnlockView.h"
 
-@interface EnterPasswordViewController : UIViewController
+typedef enum PassWordTime{
+	FirstTime,
+    SecondTime,
+    ThirdTime,
+    ForthTime
+}PassWordTime;
+
+@interface EnterPasswordViewController : UIViewController<NinGridUnlockViewDelegate>
+{
+    @private
+    NineGridUnlockView *nineLockView;
+    UILabel *alertLabel;
+    PassWordTime passWordTime;
+    NSString *codeStr;
+
+}
+
+
 
 @end

@@ -35,6 +35,7 @@
     
     MenuListViewController *menuListVC = [[MenuListViewController alloc] init];
     UINavigationController *navMenuVC = [[UINavigationController alloc] initWithRootViewController:menuListVC];
+    menuListVC.mainVC=self;
     self.masterViewController = navMenuVC;
 
 

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
-@interface LoginViewController : UIViewController
-
+@interface LoginViewController : UIViewController<UITextFieldDelegate,UIGestureRecognizerDelegate>
+{
+    @private
+    UILabel *nameLabel;
+    UITextField *textField;
+}
 @end

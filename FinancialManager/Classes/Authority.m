@@ -9,22 +9,18 @@
 #import "Authority.h"
 
 @implementation Authority
-+(BOOL)isAuthority{
-    BOOL isLogin ;
-    
-    isLogin=   [[[NSUserDefaults standardUserDefaults] objectForKey:@"YAJI_LOGIN"] boolValue];
-    return isLogin;
-    
++(BOOL)isAuthority{    
+   return [[[NSUserDefaults standardUserDefaults] objectForKey:@"Is_Login"] boolValue];
 }
 
 +(void)LoginIn{
-     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"YAJI_LOGIN"];
+     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Is_Login"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 
 +(void)LoginOut{
-     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"YAJI_LOGIN"];
+     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Is_Login"];
         [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  FinancialManager
+
+  Created by Zoe on 13-3-25.
+  Copyright (c) 2013年 邹 露. All rights reserved.
+*/
+
+
+//======登陆&密码界面====
+"Login" = "登陆";
+"name:"="姓名";
+"Please enter your name" = "输入姓名";

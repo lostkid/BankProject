@@ -17,6 +17,8 @@
 		AE0F475416EEFCF800D55397 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0F475316EEFCF800D55397 /* Default-568h@2x.png */; };
 		AE0F476116EF12C500D55397 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F476016EF12C500D55397 /* libsqlite3.dylib */; };
 		AE0F476316EF12D700D55397 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F476216EF12D700D55397 /* QuartzCore.framework */; };
+		C89E6FA616FFE6F1009A81BF /* UINavigationBar+CustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C89E6FA516FFE6F1009A81BF /* UINavigationBar+CustomNavigationBar.m */; };
+		C89E6FA916FFEAEF009A81BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C89E6FAB16FFEAEF009A81BF /* Localizable.strings */; };
 		C8CF83B016FC04E7002EB48F /* MenuListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CF83AF16FC04E7002EB48F /* MenuListViewController.m */; };
 		C8CF83B116FC0D5A002EB48F /* CustomerInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EF21FD16FB56C30025C7D4 /* CustomerInformationViewController.m */; };
 		C8CF83B816FC23B9002EB48F /* bg_title_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C8CF83B716FC23B9002EB48F /* bg_title_bar@2x.png */; };
@@ -24,6 +26,8 @@
 		C8CF83BE16FC243C002EB48F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C8CF83BD16FC243C002EB48F /* Icon@2x.png */; };
 		C8CF83C316FC285B002EB48F /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = C8CF83C116FC285B002EB48F /* check.png */; };
 		C8CF83C416FC285B002EB48F /* uncheck.png in Resources */ = {isa = PBXBuildFile; fileRef = C8CF83C216FC285B002EB48F /* uncheck.png */; };
+		C8CF83C616FC4352002EB48F /* NineGridUnlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CF83C016FC284F002EB48F /* NineGridUnlockView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C8CF83C716FC4A16002EB48F /* Authority.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CF83B616FC22BF002EB48F /* Authority.m */; };
 		C8EF21DD16FB519B0025C7D4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EF21DC16FB519B0025C7D4 /* LoginViewController.m */; };
 		C8EF21E016FB51C60025C7D4 /* EnterPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EF21DF16FB51C60025C7D4 /* EnterPasswordViewController.m */; };
 		C8EF220016FB56ED0025C7D4 /* FinancialToolBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8EF21FF16FB56ED0025C7D4 /* FinancialToolBoxViewController.m */; };
@@ -50,11 +54,12 @@
 		AE0F476016EF12C500D55397 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		AE0F476216EF12D700D55397 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C835DDEA16FB4D7800559CF5 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		C835DDF916FB4DA700559CF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C89E6FA416FFE6F1009A81BF /* UINavigationBar+CustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+CustomNavigationBar.h"; sourceTree = "<group>"; };
+		C89E6FA516FFE6F1009A81BF /* UINavigationBar+CustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+CustomNavigationBar.m"; sourceTree = "<group>"; };
+		C89E6FAA16FFEAEF009A81BF /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C89E6FAC16FFEB70009A81BF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C8CF83AE16FC04E7002EB48F /* MenuListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuListViewController.h; sourceTree = "<group>"; };
 		C8CF83AF16FC04E7002EB48F /* MenuListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuListViewController.m; sourceTree = "<group>"; };
-		C8CF83B316FC22B2002EB48F /* CustomNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomNavigationBar.h; sourceTree = "<group>"; };
-		C8CF83B416FC22B2002EB48F /* CustomNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationBar.m; sourceTree = "<group>"; };
 		C8CF83B516FC22BF002EB48F /* Authority.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Authority.h; sourceTree = "<group>"; };
 		C8CF83B616FC22BF002EB48F /* Authority.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Authority.m; sourceTree = "<group>"; };
 		C8CF83B716FC23B9002EB48F /* bg_title_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg_title_bar@2x.png"; path = "../bg_title_bar@2x.png"; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 		C8CF83C016FC284F002EB48F /* NineGridUnlockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NineGridUnlockView.m; sourceTree = "<group>"; };
 		C8CF83C116FC285B002EB48F /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		C8CF83C216FC285B002EB48F /* uncheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uncheck.png; sourceTree = "<group>"; };
+		C8CF83C516FC419E002EB48F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C8EF21DB16FB519B0025C7D4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C8EF21DC16FB519B0025C7D4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C8EF21DE16FB51C60025C7D4 /* EnterPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterPasswordViewController.h; sourceTree = "<group>"; };
@@ -143,7 +149,7 @@
 				C8EF21E516FB52910025C7D4 /* Models */,
 				C8EF21E416FB52720025C7D4 /* Views */,
 				AE0F477016EF13BA00D55397 /* Controllers */,
-				C835DDF916FB4DA700559CF5 /* AppDelegate.m */,
+				C8CF83C516FC419E002EB48F /* AppDelegate.h */,
 				AE0F474D16EEFCF800D55397 /* AppDelegate.m */,
 				AE0F474416EEFCF700D55397 /* Supporting Files */,
 			);
@@ -158,6 +164,7 @@
 				AE0F474516EEFCF700D55397 /* FinancialManager-Info.plist */,
 				AE0F474916EEFCF800D55397 /* main.m */,
 				C835DDEA16FB4D7800559CF5 /* InfoPlist.strings */,
+				C89E6FAB16FFEAEF009A81BF /* Localizable.strings */,
 				AE0F474B16EEFCF800D55397 /* FinancialManager-Prefix.pch */,
 				AE0F474F16EEFCF800D55397 /* Default.png */,
 				AE0F475116EEFCF800D55397 /* Default@2x.png */,
@@ -184,8 +191,8 @@
 			children = (
 				C8CF83B516FC22BF002EB48F /* Authority.h */,
 				C8CF83B616FC22BF002EB48F /* Authority.m */,
-				C8CF83B316FC22B2002EB48F /* CustomNavigationBar.h */,
-				C8CF83B416FC22B2002EB48F /* CustomNavigationBar.m */,
+				C89E6FA416FFE6F1009A81BF /* UINavigationBar+CustomNavigationBar.h */,
+				C89E6FA516FFE6F1009A81BF /* UINavigationBar+CustomNavigationBar.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -344,6 +351,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = AE0F473116EEFCF700D55397;
 			productRefGroup = AE0F473B16EEFCF700D55397 /* Products */;
@@ -368,6 +376,7 @@
 				C8CF83BE16FC243C002EB48F /* Icon@2x.png in Resources */,
 				C8CF83C316FC285B002EB48F /* check.png in Resources */,
 				C8CF83C416FC285B002EB48F /* uncheck.png in Resources */,
+				C89E6FA916FFEAEF009A81BF /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,16 +394,31 @@
 				C8EF220316FB57190025C7D4 /* ProductsShowViewController.m in Sources */,
 				C8EF220616FB57350025C7D4 /* ProductsContrastViewController.m in Sources */,
 				C8EF220716FB57630025C7D4 /* MainViewController.m in Sources */,
+				C8CF83C716FC4A16002EB48F /* Authority.m in Sources */,
 				C8EF220816FB57C20025C7D4 /* MGSplitCornersView.m in Sources */,
 				C8EF220916FB57C20025C7D4 /* MGSplitDividerView.m in Sources */,
+				C8CF83C616FC4352002EB48F /* NineGridUnlockView.m in Sources */,
 				C8CF83B116FC0D5A002EB48F /* CustomerInformationViewController.m in Sources */,
 				C8EF220A16FB57C20025C7D4 /* MGSplitViewController.m in Sources */,
 				C8CF83B016FC04E7002EB48F /* MenuListViewController.m in Sources */,
 				C8EF21E016FB51C60025C7D4 /* EnterPasswordViewController.m in Sources */,
+				C89E6FA616FFE6F1009A81BF /* UINavigationBar+CustomNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C89E6FAB16FFEAEF009A81BF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C89E6FAA16FFEAEF009A81BF /* en */,
+				C89E6FAC16FFEB70009A81BF /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AE0F475B16EEFCF800D55397 /* Debug */ = {
@@ -464,6 +488,7 @@
 				INFOPLIST_FILE = "FinancialManager/FinancialManager-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -477,6 +502,7 @@
 				INFOPLIST_FILE = "FinancialManager/FinancialManager-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

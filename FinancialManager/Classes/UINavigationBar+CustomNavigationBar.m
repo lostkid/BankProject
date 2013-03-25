@@ -1,32 +1,24 @@
 //
-//  CustomNavigationBar.m
-//  Summly
+//  UINavigationBar+CustomNavigationBar.m
+//  FinancialManager
 //
-//  Created by zoe on 12-12-17.
-//  Copyright (c) 2012年 zzlmilk. All rights reserved.
+//  Created by Zoe on 13-3-25.
+//  Copyright (c) 2013年 邹 露. All rights reserved.
 //
 
-#import "CustomNavigationBar.h"
+#import "UINavigationBar+CustomNavigationBar.h"
 
-@implementation  UINavigationBar (UINavigationBarCategory)
+@implementation UINavigationBar (CustomNavigationBar)
 
-- (id)init{
-    
-    if ([super init]) {
-        NSLog(@"走过");
-    }
 
-    return self;
-}
-
-- (UIImage *)barBackground//导航栏
+- (UIImage *)barBackground//粉红条的导航栏
 {
     return [UIImage imageNamed:@"bg_title_bar"];
 }
 
-- (void)drawRect:(CGRect)rect{
 
-    [super drawRect:rect];
+- (void)didMoveToSuperview
+{
     
     if ([self respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
     {
@@ -35,15 +27,17 @@
     
     UIColor *color = [UIColor groupTableViewBackgroundColor];
     self.tintColor = color;
-        
+    
+    
+    
     UIFont *font = [UIFont systemFontOfSize:20];
     
     NSDictionary *attr = [[NSDictionary alloc] initWithObjectsAndKeys:font, UITextAttributeFont,[UIColor whiteColor],UITextAttributeTextColor, nil];
     [self setTitleTextAttributes:attr];
-
+    
+    
+    
 }
-
-
 
 
 
