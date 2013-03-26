@@ -50,6 +50,7 @@
     textField.placeholder = NSLocalizedString(@"Please enter your name", nil);
     textField.returnKeyType=UIReturnKeyNext;
     textField.borderStyle=UITextBorderStyleRoundedRect;
+    textField.contentVerticalAlignment= UIControlContentVerticalAlignmentCenter;
     textField.delegate=self;
     [self.view addSubview:textField];
     

@@ -15,6 +15,8 @@
 #import "EnterPasswordViewController.h"
 
 #import "Authority.h"
+#import "DBConnection.h"
+
 
 #define LoginOutTime 10
 
@@ -25,10 +27,12 @@
     
     //第一次登陆未授权
     [Authority LoginOut];
+    
+    //初始化数据库
+    [DBConnection createEditableCopyOfDatabaseIfNeeded:NO];
+    [DBConnection getSharedDatabase];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    self.viewController = [[MainViewController alloc] init];
-//    self.window.rootViewController = self.viewController;
     [self.window setBackgroundColor:[UIColor whiteColor]];
     [self getLoginVC];
     [self.window makeKeyAndVisible];

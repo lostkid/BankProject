@@ -18,9 +18,9 @@
 
 
 //======主界面=======
-"Login Out" = "登出";
+"LoginOut" = "登出";
 "Customer Info"="客户资料";
 "Financial Tool Box" = "金融工具箱";
 "Product Show" = "产品展示";
 "Product Contrast" = "产品对比";
-
+"menu"="菜单";

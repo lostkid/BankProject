@@ -44,9 +44,11 @@
 {
     [super viewDidLoad];
         
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Login Out" style:UIBarButtonItemStylePlain target:self action:@selector(LoginOut)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"LoginOut",nil) style:UIBarButtonItemStylePlain target:self action:@selector(LoginOut)];
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    self.title=NSLocalizedString(@"menu", nil);
 }
 
 #pragma mark--

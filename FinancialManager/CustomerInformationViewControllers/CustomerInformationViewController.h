@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomerInfo.h"
 
-
-@interface CustomerInformationViewController : UIViewController
-
+@interface CustomerInformationViewController : UIViewController<UITextFieldDelegate>
+{
+    @private
+    NSInteger tagInt;
+    CustomerInfo *customerInfo;
+}
 + (CustomerInformationViewController *)instance;
 
 @end

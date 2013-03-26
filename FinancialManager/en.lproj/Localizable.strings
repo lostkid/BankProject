@@ -14,11 +14,12 @@
 
 
 //======主界面=======
-"Login Out" = "Login Out";
+"LoginOut" = "Login Out";
 "Customer Info"="Customer Info";
 "Financial Tool Box" = "Financial Tool Box";
 "Product Show" = "Product Show";
 "Product Contrast" = "Product Contrast";
+"menu"="menu";
 
 
 

@@ -11,7 +11,6 @@
 #import "CustomerInformationViewController.h"
 #import "MenuListViewController.h"
 
-#define SplitWidth 200
 
 @interface MainViewController ()
 

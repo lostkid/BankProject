@@ -13,4 +13,6 @@
     #import <Foundation/Foundation.h>
 #endif
 
-#define MAIN_DATABASE_NAME @"xxx.sqlit"
+#define MAIN_DATABASE_NAME @"FMdatabase.sqlit"
+
+#define SplitWidth 200
