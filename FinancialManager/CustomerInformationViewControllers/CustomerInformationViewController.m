@@ -7,6 +7,8 @@
 //
 
 #import "CustomerInformationViewController.h"
+#import "CustomerListViewController.h"
+
 #define Width 300
 #define TopMargin 100
 #define Distance 30
@@ -58,7 +60,7 @@ static CustomerInformationViewController *instance = nil;
     textField.placeholder = NSLocalizedString(@"", nil);
     textField.borderStyle=UITextBorderStyleRoundedRect;
     textField.contentVerticalAlignment= UIControlContentVerticalAlignmentCenter;
-    textField.tag=tagInt;
+    textField.tag=tagInt+10;
     [self.view addSubview:textField];
     
     tagInt ++;
@@ -69,8 +71,19 @@ static CustomerInformationViewController *instance = nil;
 {
     [super viewDidLoad];
     
+    //用户信息model
     customerInfo = [[CustomerInfo alloc] init];
     
+    //初始化views
+    [self initViews];
+    
+    //rightItem
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"viewCustmers", nil) style:UIBarButtonItemStylePlain target:self action:@selector(viewCustomers:)];
+    
+}
+
+-(void)initViews{
+
     //姓名
     UILabel *nameLabel = [self createLabel:TopMargin text:NSLocalizedString(@"customName", nil)];
     
@@ -83,16 +96,18 @@ static CustomerInformationViewController *instance = nil;
     UISegmentedControl *segmentControl = [[UISegmentedControl alloc] initWithItems:sexArr];
     [segmentControl setFrame:CGRectMake(sexLabel.frame.size.width+sexLabel.frame.origin.x+Distance, sexLabel.frame.origin.y,Width-sexLabel.frame.size.width-Distance,LABEL_HEIGHT)];
     [segmentControl addTarget:self action:@selector(selectButton:) forControlEvents:UIControlEventValueChanged];
+    segmentControl.selectedSegmentIndex=0;
+    [self selectButton:segmentControl];
     [self.view addSubview:segmentControl];
-        
+      
     //年龄
     UILabel *ageLabel = [self createLabel:sexLabel.frame.size.height+sexLabel.frame.origin.y+Distance text:NSLocalizedString(@"age",nil)];
-
+    
     [self createTextField:CGRectMake(ageLabel.frame.size.width+ageLabel.frame.origin.x+Distance, ageLabel.frame.origin.y,Width-ageLabel.frame.size.width-Distance,LABEL_HEIGHT)];
-
+    
     //行业
     UILabel *industryLabel = [self createLabel:ageLabel.frame.origin.y+ageLabel.frame.size.height+Distance text:NSLocalizedString(@"industry", nil)];
-
+    
     [self createTextField:CGRectMake(industryLabel.frame.size.width+industryLabel.frame.origin.x+Distance, industryLabel.frame.origin.y,Width-industryLabel.frame.size.width-Distance,LABEL_HEIGHT)];
     
     //年收入
@@ -107,31 +122,62 @@ static CustomerInformationViewController *instance = nil;
     
     //保存按钮
     UIButton *saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [saveBtn setFrame:CGRectMake((568-50)/2, areaLabel.frame.size.height+areaLabel.frame.origin.y+Distance, 50, 30)];
     [saveBtn setTitle:NSLocalizedString(@"save", nil) forState:UIControlStateNormal];
+    [saveBtn setBackgroundColor:[UIColor redColor]];
+    [saveBtn setFrame:CGRectMake(568/2, areaLabel.frame.size.height+areaLabel.frame.origin.y+Distance, 50, 30)];
     [saveBtn addTarget:self action:@selector(saveClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:saveBtn];
-    
 }
 
 #pragma mark--
 #pragma mark--action_method
+//查看用户信息
+- (void)viewCustomers:(id)sender{
+
+    CustomerListViewController *customerListVC = [[CustomerListViewController alloc] init];
+    [self.navigationController pushViewController:customerListVC animated:YES];
+
+}
+
 //SegmentedControl_Method
 -(void)selectButton:(id)sender{
     UISegmentedControl *segmentedControl = (UISegmentedControl *)sender;
+    NSString *sexStr;
     if (segmentedControl.selectedSegmentIndex==0)
-        NSLog(@"男");
+        sexStr = NSLocalizedString(@"male", nil);
     else
-        NSLog(@"女");
+        sexStr = NSLocalizedString(@"female", nil);
     
-    
+    customerInfo.sexStr=sexStr;
     
 }
 
 //UIButton_Method
 - (void)saveClick:(id)sender{
-    NSLog(@"保存");
+
+    UITextField *textField;
     
+    for (int i = 10; i<15; i++) {
+        textField = (UITextField *)[self.view viewWithTag:i];
+    
+        if (i==10) {
+            customerInfo.nameStr = textField.text;
+        }
+        if (i==11) {
+            customerInfo.ageStr = textField.text;
+        }
+        if (i==12) {
+            customerInfo.industryStr = textField.text;
+        }
+        if (i==13) {
+            customerInfo.incomeStr = textField.text;
+        }
+        if (i==14) {
+            customerInfo.areaStr = textField.text;
+        }
+    }
+    
+    [self.view endEditing:YES];
     //将一条客户信息插入数据库
     [customerInfo initDB];
 }
@@ -139,35 +185,20 @@ static CustomerInformationViewController *instance = nil;
 
 #pragma mark--
 #pragma mark--TextFieldDelegate
-- (void)textFieldDidEndEditing:(UITextField *)textField{
-    if (textField.tag==0) {
-        customerInfo.nameStr = textField.text;
-    }
-    if (textField.tag==1) {
-        customerInfo.ageStr = textField.text;
-    }
-    if (textField.tag==2) {
-        customerInfo.industryStr = textField.text;
-    }
-    if (textField.tag==3) {
-        customerInfo.incomeStr = textField.text;
-    }
-    if (textField.tag==4) {
-        customerInfo.areaStr = textField.text;
-    }
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
     
-}
-
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-
-
     return YES;
 }
 
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    
+}
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
 
-
+  
+    return YES;
+}
 
 - (void)didReceiveMemoryWarning
 {

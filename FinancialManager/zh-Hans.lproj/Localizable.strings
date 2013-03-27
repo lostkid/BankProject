@@ -24,3 +24,14 @@
 "Product Show" = "产品展示";
 "Product Contrast" = "产品对比";
 "menu"="菜单";
+
+//=====客户信息======
+"male"="M";
+"female"="F";
+
+"customName"="姓名:";
+"sex"="性别:";
+"age"="年龄:";
+"industry"="所在行业:";
+"income"="年收入:";
+"area"="地区:";

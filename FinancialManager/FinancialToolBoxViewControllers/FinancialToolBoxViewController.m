@@ -30,6 +30,11 @@
     label.text=@"金融工具箱";
     label.font=[UIFont systemFontOfSize:20];
     [self.view addSubview:label];
+    
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

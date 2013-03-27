@@ -22,12 +22,12 @@
 - (CustomerInfo *)initWithItem:(Statement *)statement{
     
     CustomerInfo *info = [[CustomerInfo alloc] init];
-    info.nameStr = [statement getString:0];
-    info.sexStr = [statement getString:1];
-    info.ageStr = [statement getString:2];
-    info.industryStr = [statement getString:3];
-    info.areaStr = [statement getString:4];
-    info.incomeStr = [statement getString:5];
+    info.nameStr = [statement getString:1];
+    info.sexStr = [statement getString:2];
+    info.ageStr = [statement getString:3];
+    info.industryStr = [statement getString:4];
+    info.areaStr = [statement getString:5];
+    info.incomeStr = [statement getString:6];
     
     return info;
 }
@@ -45,11 +45,11 @@
     [statement bindString:_sexStr forIndex:2];
     [statement bindString:_ageStr forIndex:3];
     [statement bindString:_industryStr forIndex:4];
-    [statement bindString:_ageStr forIndex:5];
+    [statement bindString:_areaStr forIndex:5];
     [statement bindString:_incomeStr forIndex:6];
 
     int step = [statement step];
-    if (step != SQLITE_DONE) {
+    if (step != SQLITE_ROW) {
 		NSLog(@"insert customer error! errorcode =%d ",step);
         
     }
@@ -61,7 +61,7 @@
 
 
 //获取用户信息
-- (NSMutableArray *)getCustomerInfoFromDB{
++ (NSMutableArray *)getCustomerInfoFromDB{
     
     NSMutableArray *mutableArr = [NSMutableArray arrayWithCapacity:6];
     
@@ -71,9 +71,8 @@
         statement = [DBConnection statementWithQuery:"SELECT * FROM CustomerInfoTable"];
     }
     
-    int step = [statement step];
-    if (step != SQLITE_DONE) {
-		NSLog(@"insert customer error! errorcode =%d ",step);
+   while ([statement step] == SQLITE_ROW) {
+//		NSLog(@"insert customer error! errorcode =%d ",step);
         CustomerInfo *info = [[CustomerInfo alloc] initWithItem:statement];
         [mutableArr addObject:info];
     }

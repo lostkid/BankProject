@@ -20,6 +20,6 @@
 @property(nonatomic,strong) NSString *areaStr;//地区
 
 - (void)initDB;
-- (NSMutableArray *)getCustomerInfoFromDB;//获得用户信息
++ (NSMutableArray *)getCustomerInfoFromDB;//获得用户信息
 -(void)deleteDataFromDB:(NSInteger )_id;//删除用户信息
 @end

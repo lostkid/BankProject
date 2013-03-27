@@ -22,4 +22,13 @@
 "menu"="menu";
 
 
+//=====客户信息======
+"male"="M";
+"female"="F";
 
+"customName"="customName:";
+"sex"="sex:";
+"age"="age:";
+"industry"="industry:";
+"income"="income:";
+"area"="area:";

@@ -17,6 +17,7 @@
 		AE0F475416EEFCF800D55397 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0F475316EEFCF800D55397 /* Default-568h@2x.png */; };
 		AE0F476116EF12C500D55397 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F476016EF12C500D55397 /* libsqlite3.dylib */; };
 		AE0F476316EF12D700D55397 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F476216EF12D700D55397 /* QuartzCore.framework */; };
+		C846A0641702C7D400D201B6 /* CustomerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C846A0631702C7D400D201B6 /* CustomerListViewController.m */; };
 		C89E6FA616FFE6F1009A81BF /* UINavigationBar+CustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C89E6FA516FFE6F1009A81BF /* UINavigationBar+CustomNavigationBar.m */; };
 		C89E6FA916FFEAEF009A81BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C89E6FAB16FFEAEF009A81BF /* Localizable.strings */; };
 		C8A5A049170192C00016734B /* CustomerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A5A048170192C00016734B /* CustomerInfo.m */; };
@@ -61,6 +62,8 @@
 		AE0F476016EF12C500D55397 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		AE0F476216EF12D700D55397 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C835DDEA16FB4D7800559CF5 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		C846A0621702C7D400D201B6 /* CustomerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerListViewController.h; sourceTree = SOURCE_ROOT; };
+		C846A0631702C7D400D201B6 /* CustomerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerListViewController.m; sourceTree = SOURCE_ROOT; };
 		C89E6FA416FFE6F1009A81BF /* UINavigationBar+CustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+CustomNavigationBar.h"; sourceTree = "<group>"; };
 		C89E6FA516FFE6F1009A81BF /* UINavigationBar+CustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+CustomNavigationBar.m"; sourceTree = "<group>"; };
 		C89E6FAA16FFEAEF009A81BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -309,6 +312,8 @@
 			children = (
 				C8EF21FC16FB56C30025C7D4 /* CustomerInformationViewController.h */,
 				C8EF21FD16FB56C30025C7D4 /* CustomerInformationViewController.m */,
+				C846A0621702C7D400D201B6 /* CustomerListViewController.h */,
+				C846A0631702C7D400D201B6 /* CustomerListViewController.m */,
 			);
 			name = CustomerInformationViewControllers;
 			path = CustomerInformation;
@@ -435,6 +440,7 @@
 				C8A5A05017019BCC0016734B /* ToolBox.m in Sources */,
 				C8A5A05617019BF00016734B /* Product.m in Sources */,
 				C8A5A05917019C430016734B /* ProductContrast.m in Sources */,
+				C846A0641702C7D400D201B6 /* CustomerListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
